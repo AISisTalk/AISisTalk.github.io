@@ -4,93 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>师姐AI玩 - 互联网法律专家</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义 Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#4a4a4a',
+                        accent: '#e6a756',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- 自定义CSS（最小化，仅用于特殊效果） -->
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/1080?random=1');
+            background-size: cover;
+            background-position: center;
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">师姐AI玩</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">首页</a></li>
-                    <li><a href="#about">关于我</a></li>
-                    <li><a href="#works">作品</a></li>
-                    <li><a href="#services">服务</a></li>
-                    <li><a href="#contact">联系方式</a></li>
-                </ul>
+<body class="font-sans text-secondary bg-gray-50">
+    <!-- 导航栏 -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-3xl font-serif font-bold text-primary mb-4 md:mb-0">师姐AI玩</div>
+            <nav class="flex flex-wrap justify-center">
+                <a href="#home" class="px-4 py-2 mx-2 font-medium text-secondary hover:text-accent transition-all">首页</a>
+                <a href="#about" class="px-4 py-2 mx-2 font-medium text-secondary hover:text-accent transition-all">关于我</a>
+                <a href="#works" class="px-4 py-2 mx-2 font-medium text-secondary hover:text-accent transition-all">作品</a>
+                <a href="#services" class="px-4 py-2 mx-2 font-medium text-secondary hover:text-accent transition-all">服务</a>
+                <a href="#contact" class="px-4 py-2 mx-2 font-medium text-secondary hover:text-accent transition-all">联系方式</a>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>师姐AI玩</h1>
-                <h2>互联网法律专家</h2>
-                <div class="divider"></div>
-                <p>资深律师，为互联网科技、金融、地产、心理咨询、设计等多个行业提供法律服务</p>
-                <a href="#about" class="cta-button">了解更多</a>
+    <!-- 英雄区域 -->
+    <section id="home" class="hero-bg text-white pt-32 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-3">师姐AI玩</h1>
+                <h2 class="text-2xl md:text-3xl font-light mb-6">互联网法律专家</h2>
+                <div class="w-16 h-1 bg-accent mx-auto md:mx-0 mb-6"></div>
+                <p class="text-lg mb-8 max-w-xl mx-auto md:mx-0">资深律师，为互联网科技、金融、地产、心理咨询、设计等多个行业提供法律服务</p>
+                <a href="#about" class="inline-block bg-accent text-primary font-bold py-3 px-8 rounded hover:bg-white hover:shadow-lg transition-all transform hover:-translate-y-1">了解更多</a>
             </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/400x400" alt="法律AI形象">
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>师姐 | 法律AI Agent 践行者</h3>
-                    <p>顶级红圈律所、腾讯蚂蚁等互联网大厂法律专家，深耕法律和互联网行业数十年。</p>
-                    <p>全国智慧法院项目发起人</p>
-                    <p>轻胜马法律创始人</p>
-                    <p>企业AI转型咨询</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/500x600" alt="个人形象">
-                </div>
+            <div class="flex justify-center">
+                <img src="https://picsum.photos/600/600?random=2" alt="法律AI形象" class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover">
             </div>
         </div>
     </section>
 
-    <section id="works" class="works">
-        <div class="container">
-            <h2 class="section-title">我的作品</h2>
-            <div class="works-grid">
-                <div class="work-category">
-                    <h3>文章合集：师姐AI玩</h3>
-                    <div class="work-items">
-                        <div class="work-item">
-                            <img src="https://via.placeholder.com/300x200" alt="文章缩略图">
-                            <h4>AI法律实践</h4>
+    <!-- 关于我 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center text-primary mb-16 relative">
+                关于我
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-serif text-primary mb-6">师姐 | 法律AI Agent 践行者</h3>
+                    <p class="text-lg mb-4">顶级红圈律所、腾讯蚂蚁等互联网大厂法律专家，深耕法律和互联网行业数十年。</p>
+                    <p class="text-lg mb-4">全国智慧法院项目发起人</p>
+                    <p class="text-lg mb-4">轻胜马法律创始人</p>
+                    <p class="text-lg mb-4">企业AI转型咨询</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://picsum.photos/800/1000?random=3" alt="个人形象" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center text-primary mb-16 relative">
+                我的作品
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4"></span>
+            </h2>
+            
+            <!-- 文章合集 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif text-center text-primary mb-10">文章合集：师姐AI玩</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <img src="https://picsum.photos/600/400?random=4" alt="文章缩略图" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-medium text-primary mb-2">AI法律实践</h4>
+                            <p class="text-gray-600">探索人工智能在法律领域的创新应用</p>
                         </div>
-                        <div class="work-item">
-                            <img src="https://via.placeholder.com/300x200" alt="文章缩略图">
-                            <h4>互联网法律前沿</h4>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <img src="https://picsum.photos/600/400?random=5" alt="文章缩略图" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-medium text-primary mb-2">互联网法律前沿</h4>
+                            <p class="text-gray-600">解析互联网法律最新发展与趋势</p>
                         </div>
-                        <div class="work-item">
-                            <img src="https://via.placeholder.com/300x200" alt="文章缩略图">
-                            <h4>法律科技应用</h4>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <img src="https://picsum.photos/600/400?random=6" alt="文章缩略图" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-medium text-primary mb-2">法律科技应用</h4>
+                            <p class="text-gray-600">法律科技如何改变传统法律服务模式</p>
                         </div>
                     </div>
                 </div>
-                <div class="work-category">
-                    <h3>视频合集：师姐AI玩</h3>
-                    <div class="work-items">
-                        <div class="work-item">
-                            <img src="https://via.placeholder.com/300x200" alt="视频缩略图">
-                            <h4>AI法律应用讲解</h4>
+            </div>
+            
+            <!-- 视频合集 -->
+            <div>
+                <h3 class="text-2xl font-serif text-center text-primary mb-10">视频合集：师姐AI玩</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="relative">
+                            <img src="https://picsum.photos/600/400?random=7" alt="视频缩略图" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-play text-white text-5xl opacity-80 hover:opacity-100 transition-all"></i>
+                            </div>
                         </div>
-                        <div class="work-item">
-                            <img src="https://via.placeholder.com/300x200" alt="视频缩略图">
-                            <h4>法律科技创新</h4>
+                        <div class="p-6">
+                            <h4 class="text-xl font-medium text-primary mb-2">AI法律应用讲解</h4>
+                            <p class="text-gray-600">详解AI如何应用于实际法律场景</p>
                         </div>
-                        <div class="work-item">
-                            <img src="https://via.placeholder.com/300x200" alt="视频缩略图">
-                            <h4>企业法律风险防范</h4>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="relative">
+                            <img src="https://picsum.photos/600/400?random=8" alt="视频缩略图" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-play text-white text-5xl opacity-80 hover:opacity-100 transition-all"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-medium text-primary mb-2">法律科技创新</h4>
+                            <p class="text-gray-600">探讨法律科技的最新创新与发展趋势</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
+                        <div class="relative">
+                            <img src="https://picsum.photos/600/400?random=9" alt="视频缩略图" class="w-full h-48 object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-play text-white text-5xl opacity-80 hover:opacity-100 transition-all"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-medium text-primary mb-2">企业法律风险防范</h4>
+                            <p class="text-gray-600">解析企业法律风险防范策略与实操</p>
                         </div>
                     </div>
                 </div>
@@ -98,98 +172,178 @@
         </div>
     </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">专业服务</h2>
-            <div class="services-content">
-                <div class="services-text">
-                    <h3>法律服务与AI咨询</h3>
-                    <p>在快速变化的数字时代，您需要既精通传统法律又了解新兴技术的专业人士。我提供深入的法律见解，结合AI技术的应用，为您的业务提供全方位保障。</p>
-                    <div class="services-list">
-                        <div class="service-item">
-                            <h4>互联网法律咨询</h4>
-                            <p>数据隐私、知识产权、平台合规</p>
+    <!-- 专业服务 -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center text-primary mb-16 relative">
+                专业服务
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-serif text-primary mb-6">法律服务与AI咨询</h3>
+                    <p class="text-lg mb-8">在快速变化的数字时代，您需要既精通传统法律又了解新兴技术的专业人士。我提供深入的法律见解，结合AI技术的应用，为您的业务提供全方位保障。</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-all">
+                            <div class="text-accent text-3xl mb-4">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h4 class="text-xl font-medium text-primary mb-2">互联网法律咨询</h4>
+                            <p class="text-gray-600">数据隐私、知识产权、平台合规</p>
                         </div>
-                        <div class="service-item">
-                            <h4>企业AI转型法律咨询</h4>
-                            <p>AI应用合规、风险评估、法律框架搭建</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-all">
+                            <div class="text-accent text-3xl mb-4">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h4 class="text-xl font-medium text-primary mb-2">企业AI转型法律咨询</h4>
+                            <p class="text-gray-600">AI应用合规、风险评估、法律框架搭建</p>
                         </div>
-                        <div class="service-item">
-                            <h4>法律AI工具开发建议</h4>
-                            <p>法律AI产品设计、功能规划、合规审查</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-all">
+                            <div class="text-accent text-3xl mb-4">
+                                <i class="fa-solid fa-gavel"></i>
+                            </div>
+                            <h4 class="text-xl font-medium text-primary mb-2">法律AI工具开发建议</h4>
+                            <p class="text-gray-600">法律AI产品设计、功能规划、合规审查</p>
                         </div>
-                        <div class="service-item">
-                            <h4>法律科技培训</h4>
-                            <p>AI法律应用培训、企业法务转型指导</p>
+                        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-all">
+                            <div class="text-accent text-3xl mb-4">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <h4 class="text-xl font-medium text-primary mb-2">法律科技培训</h4>
+                            <p class="text-gray-600">AI法律应用培训、企业法务转型指导</p>
                         </div>
                     </div>
                 </div>
-                <div class="services-image">
-                    <img src="https://via.placeholder.com/500x600" alt="法律服务示意图">
+                <div class="flex justify-center">
+                    <img src="https://picsum.photos/800/1000?random=10" alt="法律服务示意图" class="rounded-lg shadow-xl w-full max-w-md">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="values" class="values">
-        <div class="container">
-            <h2 class="section-title">我的价值观</h2>
-            <div class="values-content">
-                <div class="value-item">
-                    <h3>专业为本</h3>
+    <!-- 价值观 -->
+    <section id="values" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center mb-16 relative">
+                我的价值观
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4"></span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg hover:bg-opacity-20 transition-all">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">专业为本</h3>
                     <p>坚持法律专业标准，结合技术创新</p>
                 </div>
-                <div class="value-item">
-                    <h3>诚信透明</h3>
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg hover:bg-opacity-20 transition-all">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">诚信透明</h3>
                     <p>提供真实可靠的法律建议和技术指导</p>
                 </div>
-                <div class="value-item">
-                    <h3>创新思维</h3>
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg hover:bg-opacity-20 transition-all">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">创新思维</h3>
                     <p>将AI技术与传统法律实践相结合</p>
                 </div>
-                <div class="value-item">
-                    <h3>超越期待</h3>
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg hover:bg-opacity-20 transition-all">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">超越期待</h3>
                     <p>提供超出预期的全方位法律解决方案</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <p class="contact-intro">如果您需要专业的互联网法律服务或AI转型咨询，请随时与我联系。</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fa-brands fa-weixin"></i>
-                    <p>公众号/视频号: 师姐AI玩</p>
+    <!-- 联系我 -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center text-primary mb-6 relative">
+                联系我
+                <span class="block w-16 h-1 bg-accent mx-auto mt-4"></span>
+            </h2>
+            <p class="text-center text-lg max-w-2xl mx-auto mb-12">如果您需要专业的互联网法律服务或AI转型咨询，请随时与我联系。</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-16">
+                <div class="flex items-center bg-white p-5 rounded-lg shadow">
+                    <div class="text-accent text-3xl mr-4">
+                        <i class="fa-brands fa-weixin"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">公众号/视频号</h4>
+                        <p>师姐AI玩</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>邮箱: contact@example.com</p>
+                <div class="flex items-center bg-white p-5 rounded-lg shadow">
+                    <div class="text-accent text-3xl mr-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-medium">邮箱</h4>
+                        <p>contact@example.com</p>
+                    </div>
                 </div>
             </div>
-            <div class="contact-form">
+            
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
                 <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="您的姓名">
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">您的姓名</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" placeholder="请输入您的姓名">
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="您的邮箱">
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">您的邮箱</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" placeholder="请输入您的邮箱">
                     </div>
-                    <div class="form-group">
-                        <textarea placeholder="您的留言"></textarea>
+                    <div class="mb-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">您的留言</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent" placeholder="请输入您的留言"></textarea>
                     </div>
-                    <button type="submit" class="submit-button">发送信息</button>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-white font-medium py-3 px-8 rounded-lg hover:bg-accent transition-all transform hover:-translate-y-1">发送信息</button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-6 text-center">
             <p>&copy; 2023 师姐AI玩 - 互联网法律专家. 保留所有权利.</p>
         </div>
     </footer>
+
+    <!-- JavaScript脚本 -->
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
 </body>
 </html> 
